@@ -1,0 +1,682 @@
+[
+  {
+    "model": "restaurants.district",
+    "pk": 1,
+    "fields": {
+      "name": "Dhaka Central",
+      "district_code": "DHK-CT",
+      "created_at": "2025-02-01T12:00:00Z",
+      "updated_at": "2025-02-01T12:00:00Z"
+    }
+  },
+  {
+    "model": "restaurants.district",
+    "pk": 2,
+    "fields": {
+      "name": "Chittagong Hills",
+      "district_code": "CTG-HL",
+      "created_at": "2025-02-01T12:00:00Z",
+      "updated_at": "2025-02-01T12:00:00Z"
+    }
+  },
+  {
+    "model": "restaurants.district",
+    "pk": 3,
+    "fields": {
+      "name": "Sylhet Valley",
+      "district_code": "SYL-VY",
+      "created_at": "2025-02-01T12:00:00Z",
+      "updated_at": "2025-02-01T12:00:00Z"
+    }
+  },
+  {
+    "model": "restaurants.district",
+    "pk": 4,
+    "fields": {
+      "name": "Khulna Riverside",
+      "district_code": "KHU-RS",
+      "created_at": "2025-02-01T12:00:00Z",
+      "updated_at": "2025-02-01T12:00:00Z"
+    }
+  },
+  {
+    "model": "restaurants.district",
+    "pk": 5,
+    "fields": {
+      "name": "Rajshahi Gardens",
+      "district_code": "RAJ-GD",
+      "created_at": "2025-02-01T12:00:00Z",
+      "updated_at": "2025-02-01T12:00:00Z"
+    }
+  },
+  {
+    "model": "restaurants.restaurant",
+    "pk": 1,
+    "fields": {
+      "name": "Spice Kingdom",
+      "description": "Authentic Bangladeshi cuisine with royal treatment",
+      "owner": 2,
+      "logo": "",
+      "created_at": "2025-02-10T09:30:00Z",
+      "updated_at": "2025-02-10T09:30:00Z"
+    }
+  },
+  {
+    "model": "restaurants.restaurant",
+    "pk": 2,
+    "fields": {
+      "name": "Burger Barn",
+      "description": "Gourmet burgers and American classics",
+      "owner": 3,
+      "logo": "",
+      "created_at": "2025-02-11T10:15:00Z",
+      "updated_at": "2025-02-11T10:15:00Z"
+    }
+  },
+  {
+    "model": "restaurants.restaurant",
+    "pk": 3,
+    "fields": {
+      "name": "Sushi Symphony",
+      "description": "Japanese delicacies and fresh sushi",
+      "owner": 4,
+      "logo": "",
+      "created_at": "2025-02-12T11:20:00Z",
+      "updated_at": "2025-02-12T11:20:00Z"
+    }
+  },
+  {
+    "model": "restaurants.restaurant",
+    "pk": 4,
+    "fields": {
+      "name": "Pizza Palazzo",
+      "description": "Wood-fired Italian pizzas and pastas",
+      "owner": 5,
+      "logo": "",
+      "created_at": "2025-02-13T14:45:00Z",
+      "updated_at": "2025-02-13T14:45:00Z"
+    }
+  },
+  {
+    "model": "restaurants.restaurant",
+    "pk": 5,
+    "fields": {
+      "name": "Curry Leaf",
+      "description": "South Indian vegetarian specialties",
+      "owner": 2,
+      "logo": "",
+      "created_at": "2025-02-14T16:30:00Z",
+      "updated_at": "2025-02-14T16:30:00Z"
+    }
+  },
+  {
+    "model": "restaurants.restaurantbranch",
+    "pk": 1,
+    "fields": {
+      "restaurant": 1,
+      "district": 1,
+      "city": "Dhaka",
+      "location": "Gulshan Avenue",
+      "branch_code": "SPICEKINGDOM-DHK-CT-9B2A"
+    }
+  },
+  {
+    "model": "restaurants.restaurantbranch",
+    "pk": 2,
+    "fields": {
+      "restaurant": 1,
+      "district": 2,
+      "city": "Chittagong",
+      "location": "Agrabad Commercial Area",
+      "branch_code": "SPICEKINGDOM-CTG-HL-7C4D"
+    }
+  },
+  {
+    "model": "restaurants.restaurantbranch",
+    "pk": 3,
+    "fields": {
+      "restaurant": 2,
+      "district": 1,
+      "city": "Dhaka",
+      "location": "Banani Road 11",
+      "branch_code": "BURGERBARN-DHK-CT-1F8G"
+    }
+  },
+  {
+    "model": "restaurants.restaurantbranch",
+    "pk": 4,
+    "fields": {
+      "restaurant": 2,
+      "district": 4,
+      "city": "Khulna",
+      "location": "Shibbari Crossing",
+      "branch_code": "BURGERBARN-KHU-RS-3H6J"
+    }
+  },
+  {
+    "model": "restaurants.restaurantbranch",
+    "pk": 5,
+    "fields": {
+      "restaurant": 3,
+      "district": 1,
+      "city": "Dhaka",
+      "location": "Dhanmondi Lake Road",
+      "branch_code": "SUSHISYMPHONY-DHK-CT-5K9L"
+    }
+  },
+  {
+    "model": "restaurants.restaurantbranch",
+    "pk": 6,
+    "fields": {
+      "restaurant": 3,
+      "district": 5,
+      "city": "Rajshahi",
+      "location": "Shaheb Bazar",
+      "branch_code": "SUSHISYMPHONY-RAJ-GD-2M4N"
+    }
+  },
+  {
+    "model": "restaurants.restaurantbranch",
+    "pk": 7,
+    "fields": {
+      "restaurant": 4,
+      "district": 1,
+      "city": "Dhaka",
+      "location": "Uttara Sector 7",
+      "branch_code": "PIZZAPALAZZO-DHK-CT-8P3Q"
+    }
+  },
+  {
+    "model": "restaurants.restaurantbranch",
+    "pk": 8,
+    "fields": {
+      "restaurant": 4,
+      "district": 3,
+      "city": "Sylhet",
+      "location": "Mirabazar",
+      "branch_code": "PIZZAPALAZZO-SYL-VY-6R1S"
+    }
+  },
+  {
+    "model": "restaurants.restaurantbranch",
+    "pk": 9,
+    "fields": {
+      "restaurant": 5,
+      "district": 1,
+      "city": "Dhaka",
+      "location": "Mirpur 10",
+      "branch_code": "CURRYLEAF-DHK-CT-4T7U"
+    }
+  },
+  {
+    "model": "restaurants.restaurantbranch",
+    "pk": 10,
+    "fields": {
+      "restaurant": 5,
+      "district": 4,
+      "city": "Khulna",
+      "location": "Khan Jahan Ali Road",
+      "branch_code": "CURRYLEAF-KHU-RS-9V2W"
+    }
+  },
+  {
+    "model": "restaurants.moreinfo",
+    "pk": 1,
+    "fields": {
+      "restaurant_branch": 1,
+      "delivery_fee": "40.00",
+      "minimum_order": "200.00",
+      "offer_text": "Free dessert on orders above 500৳",
+      "delivery_time": "30-45 mins",
+      "is_featured": true,
+      "is_active": true
+    }
+  },
+  {
+    "model": "restaurants.moreinfo",
+    "pk": 2,
+    "fields": {
+      "restaurant_branch": 2,
+      "delivery_fee": "60.00",
+      "minimum_order": "250.00",
+      "offer_text": "10% off on first order",
+      "delivery_time": "45-60 mins",
+      "is_featured": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "restaurants.moreinfo",
+    "pk": 3,
+    "fields": {
+      "restaurant_branch": 3,
+      "delivery_fee": "50.00",
+      "minimum_order": "300.00",
+      "offer_text": "Combo meal discount",
+      "delivery_time": "25-35 mins",
+      "is_featured": true,
+      "is_active": true
+    }
+  },
+  {
+    "model": "restaurants.moreinfo",
+    "pk": 4,
+    "fields": {
+      "restaurant_branch": 4,
+      "delivery_fee": "70.00",
+      "minimum_order": "350.00",
+      "offer_text": null,
+      "delivery_time": "40-55 mins",
+      "is_featured": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "restaurants.moreinfo",
+    "pk": 5,
+    "fields": {
+      "restaurant_branch": 5,
+      "delivery_fee": "45.00",
+      "minimum_order": "400.00",
+      "offer_text": "Free miso soup with every order",
+      "delivery_time": "30-40 mins",
+      "is_featured": true,
+      "is_active": true
+    }
+  },
+  {
+    "model": "restaurants.moreinfo",
+    "pk": 6,
+    "fields": {
+      "restaurant_branch": 6,
+      "delivery_fee": "55.00",
+      "minimum_order": "250.00",
+      "offer_text": "Lunch special 12pm-3pm",
+      "delivery_time": "50-65 mins",
+      "is_featured": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "restaurants.moreinfo",
+    "pk": 7,
+    "fields": {
+      "restaurant_branch": 7,
+      "delivery_fee": "40.00",
+      "minimum_order": "500.00",
+      "offer_text": "Family meal deal",
+      "delivery_time": "35-50 mins",
+      "is_featured": true,
+      "is_active": true
+    }
+  },
+  {
+    "model": "restaurants.moreinfo",
+    "pk": 8,
+    "fields": {
+      "restaurant_branch": 8,
+      "delivery_fee": "65.00",
+      "minimum_order": "300.00",
+      "offer_text": "Buy 1 get 1 free on Tuesdays",
+      "delivery_time": "45-60 mins",
+      "is_featured": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "restaurants.moreinfo",
+    "pk": 9,
+    "fields": {
+      "restaurant_branch": 9,
+      "delivery_fee": "30.00",
+      "minimum_order": "150.00",
+      "offer_text": "10% off for students",
+      "delivery_time": "25-35 mins",
+      "is_featured": true,
+      "is_active": true
+    }
+  },
+  {
+    "model": "restaurants.moreinfo",
+    "pk": 10,
+    "fields": {
+      "restaurant_branch": 10,
+      "delivery_fee": "50.00",
+      "minimum_order": "200.00",
+      "offer_text": "Free delivery on orders above 1000৳",
+      "delivery_time": "40-55 mins",
+      "is_featured": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "restaurants.contactinfo",
+    "pk": 1,
+    "fields": {
+      "restaurant_branch": 1,
+      "phone_number": "+8801711111111",
+      "email": "gulshan@spicekingdom.com",
+      "whatsapp_number": "+8801711111111",
+      "facebook_page": "https://facebook.com/spicekingdom.gulshan",
+      "website": "https://spicekingdom.com",
+      "map_location_url": "https://maps.app.goo.gl/abc123"
+    }
+  },
+  {
+    "model": "restaurants.contactinfo",
+    "pk": 2,
+    "fields": {
+      "restaurant_branch": 2,
+      "phone_number": "+8801722222222",
+      "email": "agrabad@spicekingdom.com",
+      "whatsapp_number": "+8801722222222",
+      "facebook_page": "https://facebook.com/spicekingdom.agrabad",
+      "website": null,
+      "map_location_url": "https://maps.app.goo.gl/def456"
+    }
+  },
+  {
+    "model": "restaurants.contactinfo",
+    "pk": 3,
+    "fields": {
+      "restaurant_branch": 3,
+      "phone_number": "+8801733333333",
+      "email": "banani@burgerbarn.com",
+      "whatsapp_number": null,
+      "facebook_page": "https://facebook.com/burgerbarn.banani",
+      "website": "https://burgerbarn.com",
+      "map_location_url": "https://maps.app.goo.gl/ghi789"
+    }
+  },
+  {
+    "model": "restaurants.contactinfo",
+    "pk": 4,
+    "fields": {
+      "restaurant_branch": 4,
+      "phone_number": "+8801744444444",
+      "email": "shibbari@burgerbarn.com",
+      "whatsapp_number": "+8801744444444",
+      "facebook_page": null,
+      "website": null,
+      "map_location_url": "https://maps.app.goo.gl/jkl012"
+    }
+  },
+  {
+    "model": "restaurants.contactinfo",
+    "pk": 5,
+    "fields": {
+      "restaurant_branch": 5,
+      "phone_number": "+8801755555555",
+      "email": "dhanmondi@sushisymphony.com",
+      "whatsapp_number": "+8801755555555",
+      "facebook_page": "https://facebook.com/sushisymphony.dhanmondi",
+      "website": "https://sushisymphony.com",
+      "map_location_url": "https://maps.app.goo.gl/mno345"
+    }
+  },
+  {
+  "model": "restaurants.contactinfo",
+  "pk": 6,
+  "fields": {
+    "restaurant_branch": 6,
+    "phone_number": "+8801766666666",
+    "email": "shahebbazar@sushisymphony.com",
+    "whatsapp_number": "+8801766666666",
+    "facebook_page": "https://facebook.com/sushisymphony.rajshahi",
+    "website": null,
+    "map_location_url": "https://maps.app.goo.gl/pqr678"
+  }
+  },
+  {
+    "model": "restaurants.contactinfo",
+    "pk": 7,
+    "fields": {
+      "restaurant_branch": 7,
+      "phone_number": "+8801777777777",
+      "email": "uttara@pizzapalazzo.com",
+      "whatsapp_number": null,
+      "facebook_page": "https://facebook.com/pizzapalazzo.uttara",
+      "website": "https://pizzapalazzo.com",
+      "map_location_url": "https://maps.app.goo.gl/stu901"
+    }
+  },
+  {
+    "model": "restaurants.contactinfo",
+    "pk": 8,
+    "fields": {
+      "restaurant_branch": 8,
+      "phone_number": "+8801788888888",
+      "email": "mirabazar@pizzapalazzo.com",
+      "whatsapp_number": "+8801788888888",
+      "facebook_page": "https://facebook.com/pizzapalazzo.sylhet",
+      "website": null,
+      "map_location_url": "https://maps.app.goo.gl/vwx234"
+    }
+  },
+  {
+    "model": "restaurants.contactinfo",
+    "pk": 9,
+    "fields": {
+      "restaurant_branch": 9,
+      "phone_number": "+8801799999999",
+      "email": "mirpur@curryleaf.com",
+      "whatsapp_number": "+8801799999999",
+      "facebook_page": "https://facebook.com/curryleaf.mirpur",
+      "website": "https://curryleaf.com",
+      "map_location_url": "https://maps.app.goo.gl/yzab567"
+    }
+  },
+  {
+    "model": "restaurants.contactinfo",
+    "pk": 10,
+    "fields": {
+      "restaurant_branch": 10,
+      "phone_number": "+8801700000000",
+      "email": "khulna@curryleaf.com",
+      "whatsapp_number": null,
+      "facebook_page": "https://facebook.com/curryleaf.khulna",
+      "website": null,
+      "map_location_url": "https://maps.app.goo.gl/cde890"
+    }
+  },
+  {
+    "model": "restaurants.restaurantschedule",
+    "pk": 1,
+    "fields": {
+      "restaurant_branch": 1,
+      "day": "Monday",
+      "opening_time": "10:00:00",
+      "closing_time": "22:00:00"
+    }
+  },
+  {
+    "model": "restaurants.restaurantschedule",
+    "pk": 2,
+    "fields": {
+      "restaurant_branch": 1,
+      "day": "Friday",
+      "opening_time": "10:00:00",
+      "closing_time": "23:00:00"
+    }
+  },
+  {
+    "model": "restaurants.restaurantschedule",
+    "pk": 3,
+    "fields": {
+      "restaurant_branch": 2,
+      "day": "Monday",
+      "opening_time": "11:00:00",
+      "closing_time": "23:00:00"
+    }
+  },
+  {
+    "model": "restaurants.restaurantschedule",
+    "pk": 4,
+    "fields": {
+      "restaurant_branch": 2,
+      "day": "Friday",
+      "opening_time": "11:00:00",
+      "closing_time": "00:00:00"
+    }
+  },
+  {
+    "model": "restaurants.restaurantschedule",
+    "pk": 5,
+    "fields": {
+      "restaurant_branch": 3,
+      "day": "Monday",
+      "opening_time": "07:00:00",
+      "closing_time": "22:00:00"
+    }
+  },
+  {
+    "model": "restaurants.restaurantschedule",
+    "pk": 6,
+    "fields": {
+      "restaurant_branch": 3,
+      "day": "Friday",
+      "opening_time": "07:00:00",
+      "closing_time": "23:00:00"
+    }
+  },
+  {
+    "model": "restaurants.restaurantschedule",
+    "pk": 7,
+    "fields": {
+      "restaurant_branch": 4,
+      "day": "Monday",
+      "opening_time": "09:00:00",
+      "closing_time": "21:00:00"
+    }
+  },
+  {
+    "model": "restaurants.restaurantschedule",
+    "pk": 8,
+    "fields": {
+      "restaurant_branch": 4,
+      "day": "Friday",
+      "opening_time": "09:00:00",
+      "closing_time": "22:00:00"
+    }
+  },
+  {
+    "model": "restaurants.restaurantschedule",
+    "pk": 9,
+    "fields": {
+      "restaurant_branch": 5,
+      "day": "Monday",
+      "opening_time": "11:30:00",
+      "closing_time": "21:30:00"
+    }
+  },
+  {
+    "model": "restaurants.restaurantschedule",
+    "pk": 10,
+    "fields": {
+      "restaurant_branch": 5,
+      "day": "Friday",
+      "opening_time": "11:30:00",
+      "closing_time": "22:30:00"
+    }
+  },
+  {
+    "model": "restaurants.restaurantschedule",
+    "pk": 11,
+    "fields": {
+      "restaurant_branch": 6,
+      "day": "Monday",
+      "opening_time": "12:00:00",
+      "closing_time": "23:00:00"
+    }
+  },
+  {
+    "model": "restaurants.restaurantschedule",
+    "pk": 12,
+    "fields": {
+      "restaurant_branch": 6,
+      "day": "Friday",
+      "opening_time": "12:00:00",
+      "closing_time": "00:00:00"
+    }
+  },
+  {
+    "model": "restaurants.restaurantschedule",
+    "pk": 13,
+    "fields": {
+      "restaurant_branch": 7,
+      "day": "Monday",
+      "opening_time": "10:30:00",
+      "closing_time": "22:30:00"
+    }
+  },
+  {
+    "model": "restaurants.restaurantschedule",
+    "pk": 14,
+    "fields": {
+      "restaurant_branch": 7,
+      "day": "Friday",
+      "opening_time": "10:30:00",
+      "closing_time": "23:30:00"
+    }
+  },
+  {
+    "model": "restaurants.restaurantschedule",
+    "pk": 15,
+    "fields": {
+      "restaurant_branch": 8,
+      "day": "Monday",
+      "opening_time": "08:00:00",
+      "closing_time": "20:00:00"
+    }
+  },
+  {
+    "model": "restaurants.restaurantschedule",
+    "pk": 16,
+    "fields": {
+      "restaurant_branch": 8,
+      "day": "Friday",
+      "opening_time": "08:00:00",
+      "closing_time": "21:00:00"
+    }
+  },
+  {
+    "model": "restaurants.restaurantschedule",
+    "pk": 17,
+    "fields": {
+      "restaurant_branch": 9,
+      "day": "Monday",
+      "opening_time": "06:00:00",
+      "closing_time": "18:00:00"
+    }
+  },
+  {
+    "model": "restaurants.restaurantschedule",
+    "pk": 18,
+    "fields": {
+      "restaurant_branch": 9,
+      "day": "Friday",
+      "opening_time": "06:00:00",
+      "closing_time": "19:00:00"
+    }
+  },
+  {
+    "model": "restaurants.restaurantschedule",
+    "pk": 19,
+    "fields": {
+      "restaurant_branch": 10,
+      "day": "Monday",
+      "opening_time": "13:00:00",
+      "closing_time": "23:00:00"
+    }
+  },
+  {
+    "model": "restaurants.restaurantschedule",
+    "pk": 20,
+    "fields": {
+      "restaurant_branch": 10,
+      "day": "Friday",
+      "opening_time": "13:00:00",
+      "closing_time": "00:00:00"
+    }
+  }
+]

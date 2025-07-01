@@ -2,9 +2,10 @@ from rest_framework import serializers
 from .models import *
 
 class DistrictSerializer(serializers.ModelSerializer):
+    total_restaurants = serializers.IntegerField(read_only=True)
     class Meta:
         model = District
-        fields = ['id','name','district_code']
+        fields = ['id','name','district_code','total_restaurants']
 
 class RestaurantSerializer(serializers.ModelSerializer):
     class Meta:

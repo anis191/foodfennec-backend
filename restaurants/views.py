@@ -2,9 +2,10 @@ from django.shortcuts import render
 from rest_framework.viewsets import ModelViewSet
 from .serializers import *
 from .models import *
+from django.db.models import Count
 
 class DistrictViewSet(ModelViewSet):
-    queryset = District.objects.all()
+    queryset = District.objects.annotate(total_restaurants=Count('restaurants')).all()
     serializer_class = DistrictSerializer
 
 class RestaurantViewSet(ModelViewSet):
