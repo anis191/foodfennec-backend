@@ -61,7 +61,6 @@ class RestaurantSchedule(models.Model):
         (SATURDAY, 'Saturday'),
         (SUNDAY, 'Sunday'),
     ]
-    # restaurant = models.ForeignKey(Restaurant, on_delete=models.CASCADE, related_name='schedules')
     restaurant_branch = models.ForeignKey(RestaurantBranch, on_delete=models.CASCADE, related_name='schedules')
     day = models.CharField(max_length=10, choices=DAYS_OF_WEEK)
     opening_time = models.TimeField()
@@ -73,8 +72,8 @@ class RestaurantSchedule(models.Model):
     def __str__(self):
         return f"{self.restaurant_branch.branch_code} - schedule"
 
+# MoreInfo Model
 class MoreInfo(models.Model):
-    # restaurant = models.OneToOneField(Restaurant, on_delete=models.CASCADE, related_name='info')
     restaurant_branch = models.OneToOneField(RestaurantBranch, on_delete=models.CASCADE, related_name='info')
     delivery_fee = models.DecimalField(max_digits=6, decimal_places=2, default=0.0)
     minimum_order = models.DecimalField(max_digits=6, decimal_places=2, default=0.0)
@@ -86,6 +85,7 @@ class MoreInfo(models.Model):
     def __str__(self):
         return f"{self.restaurant_branch.branch_code} - more info"
 
+# ContactInfo Model
 class ContactInfo(models.Model):
     restaurant_branch = models.OneToOneField(RestaurantBranch, on_delete=models.CASCADE, related_name='contact_info')
     phone_number = models.CharField(max_length=20)
