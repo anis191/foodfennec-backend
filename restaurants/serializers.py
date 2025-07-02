@@ -1,26 +1,53 @@
 from rest_framework import serializers
 from .models import *
 
-class DistrictSerializer(serializers.ModelSerializer):
-    total_restaurants = serializers.IntegerField(read_only=True)
-    class Meta:
-        model = District
-        fields = ['id','name','district_code','total_restaurants']
-
 class RestaurantSerializer(serializers.ModelSerializer):
     class Meta:
         model = Restaurant
         fields = ['id','name','description','owner']
 
-class RestaurantBranchSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = RestaurantBranch
-        fields = ['id','restaurant','district','city','location']
-
 class RestaurantScheduleSerializer(serializers.ModelSerializer):
     class Meta:
         model = RestaurantSchedule
         fields = ['id','restaurant_branch','day','opening_time','closing_time']
+
+'''
+class RestaurantBranchSerializer(serializers.ModelSerializer):
+    restaurant = serializers.PrimaryKeyRelatedField(
+        queryset = Restaurant.objects.all(), write_only=True
+    )
+    restaurant_name = serializers.CharField(source='restaurant.name', read_only=True)
+    district = serializers.PrimaryKeyRelatedField(
+        queryset = District.objects.all(), write_only=True
+    )
+    district_name = serializers.CharField(source='district.name',read_only=True)
+    # It's a related field:
+    schedules = RestaurantScheduleSerializer(many=True, read_only=True)
+    more_info = MoreInfoSerializer(read_only=True, source='info')
+    contact_info = ContactInfoSerializer(read_only=True)
+    class Meta:
+        model = RestaurantBranch
+        fields = ['id','restaurant','restaurant_name','district','district_name','city','location','schedules','more_info','contact_info']
+'''
+
+class RestaurantBranchSerializer(serializers.ModelSerializer):
+    restaurant = serializers.PrimaryKeyRelatedField(
+        queryset = Restaurant.objects.all(), write_only=True
+    )
+    restaurant_name = serializers.CharField(source='restaurant.name', read_only=True)
+    district = serializers.PrimaryKeyRelatedField(
+        queryset = District.objects.all(), write_only=True
+    )
+    district_name = serializers.CharField(source='district.name',read_only=True)
+    class Meta:
+        model = RestaurantBranch
+        fields = ['id','restaurant','restaurant_name','district','district_name','city','location']
+
+class DistrictSerializer(serializers.ModelSerializer):
+    total_restaurants = serializers.IntegerField(read_only=True)
+    class Meta:
+        model = District
+        fields = ['id','name','district_code','total_restaurants']
 
 class MoreInfoSerializer(serializers.ModelSerializer):
     class Meta:

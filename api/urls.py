@@ -15,7 +15,7 @@ restaurant_router = routers.NestedDefaultRouter(router, 'restaurants', lookup = 
 restaurant_router.register('branches', RestaurantBranchViewSet, basename='branche')
 
 # Nested router for schedules, more-info, and contact-info under a branch
-branch_router = routers.NestedDefaultRouter(restaurant_router, 'branches', lookup='branche')
+branch_router = routers.NestedDefaultRouter(restaurant_router, 'branches', lookup='branch')
 branch_router.register('schedules', RestaurantScheduleViewSet, basename='schedule')
 branch_router.register('more-info', MoreInfoViewSet, basename='branch-more-info')
 branch_router.register('contact-info', ContactInfoViewSet, basename='branch-contact-info')
