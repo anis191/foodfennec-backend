@@ -10,19 +10,16 @@ router.register('districts', DistrictViewSet, basename='district')
 
 # Main router (for Restaurants)
 router.register('restaurants', RestaurantViewSet, basename='restaurant')
-# Nested router for branches under a restaurant
-restaurant_router = routers.NestedDefaultRouter(router, 'restaurants', lookup = 'restaurant')
-restaurant_router.register('branches', RestaurantBranchViewSet, basename='branche')
+router.register('outlets', RestaurantOutletViewSet, basename='outlet')
 
-# Nested router for schedules, more-info, and contact-info under a branch
-branch_router = routers.NestedDefaultRouter(restaurant_router, 'branches', lookup='branch')
-branch_router.register('schedules', RestaurantScheduleViewSet, basename='schedule')
-branch_router.register('more-info', MoreInfoViewSet, basename='branch-more-info')
-branch_router.register('contact-info', ContactInfoViewSet, basename='branch-contact-info')
+# Nested router for schedules, more-info, and contact-info under a outlet
+outlet_router = routers.NestedDefaultRouter(router, 'outlets', lookup='outlet')
+outlet_router.register('schedules', OutletScheduleViewSet, basename='schedule')
+outlet_router.register('more-info', MoreInfoViewSet, basename='outlet-more-info')
+outlet_router.register('contact-info', ContactInfoViewSet, basename='outlet-contact-info')
 
 urlpatterns = [
     path('', include(router.urls)),
-    path('', include(restaurant_router.urls)),
-    path('', include(branch_router.urls)),
+    path('', include(outlet_router.urls)),
 ]
 

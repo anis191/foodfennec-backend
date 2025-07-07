@@ -24,27 +24,28 @@ class Restaurant(models.Model):
     def __str__(self):
         return f"{self.name} (owner - {self.owner.email})"
 
-# RestaurantBranch Model
-class RestaurantBranch(models.Model):
-    restaurant = models.ForeignKey(Restaurant, on_delete=models.CASCADE, related_name='branches')
-    district = models.ForeignKey(District, on_delete=models.CASCADE, related_name='restaurants')
+# RestaurantOutlet Model
+class RestaurantOutlet(models.Model):
+    restaurant = models.ForeignKey(Restaurant, on_delete=models.CASCADE, related_name='outlets')
+    district = models.ForeignKey(District, on_delete=models.CASCADE, related_name='available_outlets')
     city = models.CharField(max_length=100)
     location = models.CharField(max_length=255)
-    branch_code = models.CharField(max_length=50, unique=True, null=True, blank=True)
+    outlet_code = models.CharField(max_length=50, unique=True, null=True, blank=True)
+    is_main = models.BooleanField(default=False)
 
     def save(self, *args, **kwargs):
-        if not self.branch_code and self.restaurant and self.district:
+        if not self.outlet_code and self.restaurant and self.district:
             res_name = self.restaurant.name.upper().replace(" ","")
             dist_code = self.district.district_code.upper()
             random_code = get_random_string(length=4).upper()
-            self.branch_code = f"{res_name}-{dist_code}-{random_code}"
+            self.outlet_code = f"{res_name}-{dist_code}-{random_code}"
         super().save(*args,**kwargs)
     
     def __str__(self):
-        return f"Branch: {self.branch_code}"
+        return f"Branch: {self.outlet_code}"
 
-# RestaurantSchedule Model
-class RestaurantSchedule(models.Model):
+# OutletSchedule Model
+class OutletSchedule(models.Model):
     MONDAY = 'Monday'
     TUESDAY = 'Tuesday'
     WEDNESDAY = 'Wednesday'
@@ -62,20 +63,20 @@ class RestaurantSchedule(models.Model):
         (SATURDAY, 'Saturday'),
         (SUNDAY, 'Sunday'),
     ]
-    restaurant_branch = models.ForeignKey(RestaurantBranch, on_delete=models.CASCADE, related_name='schedules')
+    restaurant_outlet = models.ForeignKey(RestaurantOutlet, on_delete=models.CASCADE, related_name='schedules')
     day = models.CharField(max_length=10, choices=DAYS_OF_WEEK)
     opening_time = models.TimeField()
     closing_time = models.TimeField()
 
     class Meta:
-        unique_together = ('restaurant_branch','day')
+        unique_together = ('restaurant_outlet','day')
     
     def __str__(self):
-        return f"{self.restaurant_branch.branch_code} - schedule"
+        return f"{self.restaurant_outlet.outlet_code} - schedule"
 
 # MoreInfo Model
 class MoreInfo(models.Model):
-    restaurant_branch = models.OneToOneField(RestaurantBranch, on_delete=models.CASCADE, related_name='info')
+    restaurant_outlet = models.OneToOneField(RestaurantOutlet, on_delete=models.CASCADE, related_name='info')
     delivery_fee = models.DecimalField(max_digits=6, decimal_places=2, default=0.0)
     minimum_order = models.DecimalField(max_digits=6, decimal_places=2, default=0.0)
     offer_text = models.CharField(max_length=50, null=True, blank=True)
@@ -84,11 +85,11 @@ class MoreInfo(models.Model):
     is_active = models.BooleanField(default=True) #Only admin can change
 
     def __str__(self):
-        return f"{self.restaurant_branch.branch_code} - more info"
+        return f"{self.restaurant_outlet.outlet_code} - more info"
 
 # ContactInfo Model
 class ContactInfo(models.Model):
-    restaurant_branch = models.OneToOneField(RestaurantBranch, on_delete=models.CASCADE, related_name='contact_info')
+    restaurant_outlet = models.OneToOneField(RestaurantOutlet, on_delete=models.CASCADE, related_name='contact_info')
     phone_number = models.CharField(max_length=20)
     email = models.EmailField(null=True, blank=True)
     whatsapp_number = models.CharField(max_length=20, null=True, blank=True)
@@ -97,4 +98,4 @@ class ContactInfo(models.Model):
     map_location_url = models.URLField(null=True, blank=True)
 
     def __str__(self):
-        return f"Contact for {self.restaurant_branch.branch_code}"
+        return f"Contact for {self.restaurant_outlet.outlet_code}"

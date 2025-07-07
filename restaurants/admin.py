@@ -24,18 +24,15 @@ class ContactInfoInline(admin.StackedInline):
     extra = 0
 
 # admin.site.register(RestaurantBranch)
-@admin.register(RestaurantBranch)
-class RestaurantBranchAdmin(admin.ModelAdmin):
-    list_display = ('branch_code', 'restaurant', 'district', 'city', 'location')
-    search_fields = ('branch_code', 'restaurant__name', 'district__name')
+@admin.register(RestaurantOutlet)
+class RestaurantOutletAdmin(admin.ModelAdmin):
+    list_display = ('outlet_code', 'restaurant', 'district', 'city', 'location')
+    search_fields = ('outlet_code', 'restaurant__name', 'district__name')
     list_filter = ('district',)
     inlines = [MoreInfoInline, ContactInfoInline]
 
-# admin.site.register(MoreInfo)
-# admin.site.register(ContactInfo)
-
 # admin.site.register(RestaurantSchedule)
-@admin.register(RestaurantSchedule)
-class RestaurantScheduleAdmin(admin.ModelAdmin):
-    list_display = ('restaurant_branch', 'day', 'opening_time', 'closing_time')
-    list_filter = ('day', 'restaurant_branch')
+@admin.register(OutletSchedule)
+class OutletScheduleAdmin(admin.ModelAdmin):
+    list_display = ('restaurant_outlet', 'day', 'opening_time', 'closing_time')
+    list_filter = ('day', 'restaurant_outlet')

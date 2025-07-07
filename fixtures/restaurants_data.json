@@ -110,120 +110,120 @@
     }
   },
   {
-    "model": "restaurants.restaurantbranch",
+    "model": "restaurants.restaurantoutlet",
     "pk": 1,
     "fields": {
       "restaurant": 1,
       "district": 1,
       "city": "Dhaka",
       "location": "Gulshan Avenue",
-      "branch_code": "SPICEKINGDOM-DHK-CT-9B2A"
+      "outlet_code": "SPICEKINGDOM-DHK-CT-9B2A"
     }
   },
   {
-    "model": "restaurants.restaurantbranch",
+    "model": "restaurants.restaurantoutlet",
     "pk": 2,
     "fields": {
       "restaurant": 1,
       "district": 2,
       "city": "Chittagong",
       "location": "Agrabad Commercial Area",
-      "branch_code": "SPICEKINGDOM-CTG-HL-7C4D"
+      "outlet_code": "SPICEKINGDOM-CTG-HL-7C4D"
     }
   },
   {
-    "model": "restaurants.restaurantbranch",
+    "model": "restaurants.restaurantoutlet",
     "pk": 3,
     "fields": {
       "restaurant": 2,
       "district": 1,
       "city": "Dhaka",
       "location": "Banani Road 11",
-      "branch_code": "BURGERBARN-DHK-CT-1F8G"
+      "outlet_code": "BURGERBARN-DHK-CT-1F8G"
     }
   },
   {
-    "model": "restaurants.restaurantbranch",
+    "model": "restaurants.restaurantoutlet",
     "pk": 4,
     "fields": {
       "restaurant": 2,
       "district": 4,
       "city": "Khulna",
       "location": "Shibbari Crossing",
-      "branch_code": "BURGERBARN-KHU-RS-3H6J"
+      "outlet_code": "BURGERBARN-KHU-RS-3H6J"
     }
   },
   {
-    "model": "restaurants.restaurantbranch",
+    "model": "restaurants.restaurantoutlet",
     "pk": 5,
     "fields": {
       "restaurant": 3,
       "district": 1,
       "city": "Dhaka",
       "location": "Dhanmondi Lake Road",
-      "branch_code": "SUSHISYMPHONY-DHK-CT-5K9L"
+      "outlet_code": "SUSHISYMPHONY-DHK-CT-5K9L"
     }
   },
   {
-    "model": "restaurants.restaurantbranch",
+    "model": "restaurants.restaurantoutlet",
     "pk": 6,
     "fields": {
       "restaurant": 3,
       "district": 5,
       "city": "Rajshahi",
       "location": "Shaheb Bazar",
-      "branch_code": "SUSHISYMPHONY-RAJ-GD-2M4N"
+      "outlet_code": "SUSHISYMPHONY-RAJ-GD-2M4N"
     }
   },
   {
-    "model": "restaurants.restaurantbranch",
+    "model": "restaurants.restaurantoutlet",
     "pk": 7,
     "fields": {
       "restaurant": 4,
       "district": 1,
       "city": "Dhaka",
       "location": "Uttara Sector 7",
-      "branch_code": "PIZZAPALAZZO-DHK-CT-8P3Q"
+      "outlet_code": "PIZZAPALAZZO-DHK-CT-8P3Q"
     }
   },
   {
-    "model": "restaurants.restaurantbranch",
+    "model": "restaurants.restaurantoutlet",
     "pk": 8,
     "fields": {
       "restaurant": 4,
       "district": 3,
       "city": "Sylhet",
       "location": "Mirabazar",
-      "branch_code": "PIZZAPALAZZO-SYL-VY-6R1S"
+      "outlet_code": "PIZZAPALAZZO-SYL-VY-6R1S"
     }
   },
   {
-    "model": "restaurants.restaurantbranch",
+    "model": "restaurants.restaurantoutlet",
     "pk": 9,
     "fields": {
       "restaurant": 5,
       "district": 1,
       "city": "Dhaka",
       "location": "Mirpur 10",
-      "branch_code": "CURRYLEAF-DHK-CT-4T7U"
+      "outlet_code": "CURRYLEAF-DHK-CT-4T7U"
     }
   },
   {
-    "model": "restaurants.restaurantbranch",
+    "model": "restaurants.restaurantoutlet",
     "pk": 10,
     "fields": {
       "restaurant": 5,
       "district": 4,
       "city": "Khulna",
       "location": "Khan Jahan Ali Road",
-      "branch_code": "CURRYLEAF-KHU-RS-9V2W"
+      "outlet_code": "CURRYLEAF-KHU-RS-9V2W"
     }
   },
   {
     "model": "restaurants.moreinfo",
     "pk": 1,
     "fields": {
-      "restaurant_branch": 1,
+      "restaurant_outlet": 1,
       "delivery_fee": "40.00",
       "minimum_order": "200.00",
       "offer_text": "Free dessert on orders above 500৳",
@@ -236,7 +236,7 @@
     "model": "restaurants.moreinfo",
     "pk": 2,
     "fields": {
-      "restaurant_branch": 2,
+      "restaurant_outlet": 2,
       "delivery_fee": "60.00",
       "minimum_order": "250.00",
       "offer_text": "10% off on first order",
@@ -249,7 +249,7 @@
     "model": "restaurants.moreinfo",
     "pk": 3,
     "fields": {
-      "restaurant_branch": 3,
+      "restaurant_outlet": 3,
       "delivery_fee": "50.00",
       "minimum_order": "300.00",
       "offer_text": "Combo meal discount",
@@ -262,7 +262,7 @@
     "model": "restaurants.moreinfo",
     "pk": 4,
     "fields": {
-      "restaurant_branch": 4,
+      "restaurant_outlet": 4,
       "delivery_fee": "70.00",
       "minimum_order": "350.00",
       "offer_text": null,
@@ -275,7 +275,7 @@
     "model": "restaurants.moreinfo",
     "pk": 5,
     "fields": {
-      "restaurant_branch": 5,
+      "restaurant_outlet": 5,
       "delivery_fee": "45.00",
       "minimum_order": "400.00",
       "offer_text": "Free miso soup with every order",
@@ -288,7 +288,7 @@
     "model": "restaurants.moreinfo",
     "pk": 6,
     "fields": {
-      "restaurant_branch": 6,
+      "restaurant_outlet": 6,
       "delivery_fee": "55.00",
       "minimum_order": "250.00",
       "offer_text": "Lunch special 12pm-3pm",
@@ -301,7 +301,7 @@
     "model": "restaurants.moreinfo",
     "pk": 7,
     "fields": {
-      "restaurant_branch": 7,
+      "restaurant_outlet": 7,
       "delivery_fee": "40.00",
       "minimum_order": "500.00",
       "offer_text": "Family meal deal",
@@ -314,7 +314,7 @@
     "model": "restaurants.moreinfo",
     "pk": 8,
     "fields": {
-      "restaurant_branch": 8,
+      "restaurant_outlet": 8,
       "delivery_fee": "65.00",
       "minimum_order": "300.00",
       "offer_text": "Buy 1 get 1 free on Tuesdays",
@@ -327,7 +327,7 @@
     "model": "restaurants.moreinfo",
     "pk": 9,
     "fields": {
-      "restaurant_branch": 9,
+      "restaurant_outlet": 9,
       "delivery_fee": "30.00",
       "minimum_order": "150.00",
       "offer_text": "10% off for students",
@@ -340,7 +340,7 @@
     "model": "restaurants.moreinfo",
     "pk": 10,
     "fields": {
-      "restaurant_branch": 10,
+      "restaurant_outlet": 10,
       "delivery_fee": "50.00",
       "minimum_order": "200.00",
       "offer_text": "Free delivery on orders above 1000৳",
@@ -353,7 +353,7 @@
     "model": "restaurants.contactinfo",
     "pk": 1,
     "fields": {
-      "restaurant_branch": 1,
+      "restaurant_outlet": 1,
       "phone_number": "+8801711111111",
       "email": "gulshan@spicekingdom.com",
       "whatsapp_number": "+8801711111111",
@@ -366,7 +366,7 @@
     "model": "restaurants.contactinfo",
     "pk": 2,
     "fields": {
-      "restaurant_branch": 2,
+      "restaurant_outlet": 2,
       "phone_number": "+8801722222222",
       "email": "agrabad@spicekingdom.com",
       "whatsapp_number": "+8801722222222",
@@ -379,7 +379,7 @@
     "model": "restaurants.contactinfo",
     "pk": 3,
     "fields": {
-      "restaurant_branch": 3,
+      "restaurant_outlet": 3,
       "phone_number": "+8801733333333",
       "email": "banani@burgerbarn.com",
       "whatsapp_number": null,
@@ -392,7 +392,7 @@
     "model": "restaurants.contactinfo",
     "pk": 4,
     "fields": {
-      "restaurant_branch": 4,
+      "restaurant_outlet": 4,
       "phone_number": "+8801744444444",
       "email": "shibbari@burgerbarn.com",
       "whatsapp_number": "+8801744444444",
@@ -405,7 +405,7 @@
     "model": "restaurants.contactinfo",
     "pk": 5,
     "fields": {
-      "restaurant_branch": 5,
+      "restaurant_outlet": 5,
       "phone_number": "+8801755555555",
       "email": "dhanmondi@sushisymphony.com",
       "whatsapp_number": "+8801755555555",
@@ -418,7 +418,7 @@
   "model": "restaurants.contactinfo",
   "pk": 6,
   "fields": {
-    "restaurant_branch": 6,
+    "restaurant_outlet": 6,
     "phone_number": "+8801766666666",
     "email": "shahebbazar@sushisymphony.com",
     "whatsapp_number": "+8801766666666",
@@ -431,7 +431,7 @@
     "model": "restaurants.contactinfo",
     "pk": 7,
     "fields": {
-      "restaurant_branch": 7,
+      "restaurant_outlet": 7,
       "phone_number": "+8801777777777",
       "email": "uttara@pizzapalazzo.com",
       "whatsapp_number": null,
@@ -444,7 +444,7 @@
     "model": "restaurants.contactinfo",
     "pk": 8,
     "fields": {
-      "restaurant_branch": 8,
+      "restaurant_outlet": 8,
       "phone_number": "+8801788888888",
       "email": "mirabazar@pizzapalazzo.com",
       "whatsapp_number": "+8801788888888",
@@ -457,7 +457,7 @@
     "model": "restaurants.contactinfo",
     "pk": 9,
     "fields": {
-      "restaurant_branch": 9,
+      "restaurant_outlet": 9,
       "phone_number": "+8801799999999",
       "email": "mirpur@curryleaf.com",
       "whatsapp_number": "+8801799999999",
@@ -470,7 +470,7 @@
     "model": "restaurants.contactinfo",
     "pk": 10,
     "fields": {
-      "restaurant_branch": 10,
+      "restaurant_outlet": 10,
       "phone_number": "+8801700000000",
       "email": "khulna@curryleaf.com",
       "whatsapp_number": null,
@@ -480,200 +480,200 @@
     }
   },
   {
-    "model": "restaurants.restaurantschedule",
+    "model": "restaurants.outletschedule",
     "pk": 1,
     "fields": {
-      "restaurant_branch": 1,
+      "restaurant_outlet": 1,
       "day": "Monday",
       "opening_time": "10:00:00",
       "closing_time": "22:00:00"
     }
   },
   {
-    "model": "restaurants.restaurantschedule",
+    "model": "restaurants.outletschedule",
     "pk": 2,
     "fields": {
-      "restaurant_branch": 1,
+      "restaurant_outlet": 1,
       "day": "Friday",
       "opening_time": "10:00:00",
       "closing_time": "23:00:00"
     }
   },
   {
-    "model": "restaurants.restaurantschedule",
+    "model": "restaurants.outletschedule",
     "pk": 3,
     "fields": {
-      "restaurant_branch": 2,
+      "restaurant_outlet": 2,
       "day": "Monday",
       "opening_time": "11:00:00",
       "closing_time": "23:00:00"
     }
   },
   {
-    "model": "restaurants.restaurantschedule",
+    "model": "restaurants.outletschedule",
     "pk": 4,
     "fields": {
-      "restaurant_branch": 2,
+      "restaurant_outlet": 2,
       "day": "Friday",
       "opening_time": "11:00:00",
       "closing_time": "00:00:00"
     }
   },
   {
-    "model": "restaurants.restaurantschedule",
+    "model": "restaurants.outletschedule",
     "pk": 5,
     "fields": {
-      "restaurant_branch": 3,
+      "restaurant_outlet": 3,
       "day": "Monday",
       "opening_time": "07:00:00",
       "closing_time": "22:00:00"
     }
   },
   {
-    "model": "restaurants.restaurantschedule",
+    "model": "restaurants.outletschedule",
     "pk": 6,
     "fields": {
-      "restaurant_branch": 3,
+      "restaurant_outlet": 3,
       "day": "Friday",
       "opening_time": "07:00:00",
       "closing_time": "23:00:00"
     }
   },
   {
-    "model": "restaurants.restaurantschedule",
+    "model": "restaurants.outletschedule",
     "pk": 7,
     "fields": {
-      "restaurant_branch": 4,
+      "restaurant_outlet": 4,
       "day": "Monday",
       "opening_time": "09:00:00",
       "closing_time": "21:00:00"
     }
   },
   {
-    "model": "restaurants.restaurantschedule",
+    "model": "restaurants.outletschedule",
     "pk": 8,
     "fields": {
-      "restaurant_branch": 4,
+      "restaurant_outlet": 4,
       "day": "Friday",
       "opening_time": "09:00:00",
       "closing_time": "22:00:00"
     }
   },
   {
-    "model": "restaurants.restaurantschedule",
+    "model": "restaurants.outletschedule",
     "pk": 9,
     "fields": {
-      "restaurant_branch": 5,
+      "restaurant_outlet": 5,
       "day": "Monday",
       "opening_time": "11:30:00",
       "closing_time": "21:30:00"
     }
   },
   {
-    "model": "restaurants.restaurantschedule",
+    "model": "restaurants.outletschedule",
     "pk": 10,
     "fields": {
-      "restaurant_branch": 5,
+      "restaurant_outlet": 5,
       "day": "Friday",
       "opening_time": "11:30:00",
       "closing_time": "22:30:00"
     }
   },
   {
-    "model": "restaurants.restaurantschedule",
+    "model": "restaurants.outletschedule",
     "pk": 11,
     "fields": {
-      "restaurant_branch": 6,
+      "restaurant_outlet": 6,
       "day": "Monday",
       "opening_time": "12:00:00",
       "closing_time": "23:00:00"
     }
   },
   {
-    "model": "restaurants.restaurantschedule",
+    "model": "restaurants.outletschedule",
     "pk": 12,
     "fields": {
-      "restaurant_branch": 6,
+      "restaurant_outlet": 6,
       "day": "Friday",
       "opening_time": "12:00:00",
       "closing_time": "00:00:00"
     }
   },
   {
-    "model": "restaurants.restaurantschedule",
+    "model": "restaurants.outletschedule",
     "pk": 13,
     "fields": {
-      "restaurant_branch": 7,
+      "restaurant_outlet": 7,
       "day": "Monday",
       "opening_time": "10:30:00",
       "closing_time": "22:30:00"
     }
   },
   {
-    "model": "restaurants.restaurantschedule",
+    "model": "restaurants.outletschedule",
     "pk": 14,
     "fields": {
-      "restaurant_branch": 7,
+      "restaurant_outlet": 7,
       "day": "Friday",
       "opening_time": "10:30:00",
       "closing_time": "23:30:00"
     }
   },
   {
-    "model": "restaurants.restaurantschedule",
+    "model": "restaurants.outletschedule",
     "pk": 15,
     "fields": {
-      "restaurant_branch": 8,
+      "restaurant_outlet": 8,
       "day": "Monday",
       "opening_time": "08:00:00",
       "closing_time": "20:00:00"
     }
   },
   {
-    "model": "restaurants.restaurantschedule",
+    "model": "restaurants.outletschedule",
     "pk": 16,
     "fields": {
-      "restaurant_branch": 8,
+      "restaurant_outlet": 8,
       "day": "Friday",
       "opening_time": "08:00:00",
       "closing_time": "21:00:00"
     }
   },
   {
-    "model": "restaurants.restaurantschedule",
+    "model": "restaurants.outletschedule",
     "pk": 17,
     "fields": {
-      "restaurant_branch": 9,
+      "restaurant_outlet": 9,
       "day": "Monday",
       "opening_time": "06:00:00",
       "closing_time": "18:00:00"
     }
   },
   {
-    "model": "restaurants.restaurantschedule",
+    "model": "restaurants.outletschedule",
     "pk": 18,
     "fields": {
-      "restaurant_branch": 9,
+      "restaurant_outlet": 9,
       "day": "Friday",
       "opening_time": "06:00:00",
       "closing_time": "19:00:00"
     }
   },
   {
-    "model": "restaurants.restaurantschedule",
+    "model": "restaurants.outletschedule",
     "pk": 19,
     "fields": {
-      "restaurant_branch": 10,
+      "restaurant_outlet": 10,
       "day": "Monday",
       "opening_time": "13:00:00",
       "closing_time": "23:00:00"
     }
   },
   {
-    "model": "restaurants.restaurantschedule",
+    "model": "restaurants.outletschedule",
     "pk": 20,
     "fields": {
-      "restaurant_branch": 10,
+      "restaurant_outlet": 10,
       "day": "Friday",
       "opening_time": "13:00:00",
       "closing_time": "00:00:00"
