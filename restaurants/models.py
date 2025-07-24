@@ -2,7 +2,7 @@ from django.db import models
 from users.models import User
 from django.utils.crypto import get_random_string
 
-# District Model
+# District Model:
 class District(models.Model):
     name = models.CharField(max_length=255, unique=True)
     district_code = models.CharField(max_length=100, unique=True)
@@ -80,7 +80,10 @@ class MoreInfo(models.Model):
     delivery_fee = models.DecimalField(max_digits=6, decimal_places=2, default=0.0)
     minimum_order = models.DecimalField(max_digits=6, decimal_places=2, default=0.0)
     offer_text = models.CharField(max_length=50, null=True, blank=True)
-    delivery_time = models.CharField(max_length=50, null=True, blank=True)
+    
+    delivery_time_min = models.IntegerField(null=True, blank=True)
+    delivery_time_max = models.IntegerField(null=True, blank=True)
+    
     is_featured = models.BooleanField(default=False) #Only admin can set
     is_active = models.BooleanField(default=True) #Only admin can change
 

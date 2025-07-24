@@ -1,10 +1,15 @@
-from django_filters.rest_framework import FilterSet
-from restaurants.models import Restaurant
+from django_filters.rest_framework import FilterSet, CharFilter, NumberFilter
+from restaurants.models import Restaurant, RestaurantOutlet
+from django.db.models import Q
 
-class RestaurantFilter(FilterSet):
+class RestaurantOutletFilter(FilterSet):
     class Meta:
-        model = Restaurant
+        model = RestaurantOutlet
         fields = {
-            # 'branches__district_id' : ['exact'],
-            # 'price' : ['gt','lt']
+            'district_id' : ['exact'],
+            'city' : ['icontains'],
+            'location' : ['icontains'],
+            'restaurant__name' : ['icontains'],
+            'info__delivery_time_max' : ['lte']
         }
+    

@@ -24,9 +24,16 @@ class RestaurantOutletSerializer(serializers.ModelSerializer):
         queryset = District.objects.all(), write_only=True
     )
     district_name = serializers.CharField(source='district.name',read_only=True)
+    delivery_fee = serializers.DecimalField(source='info.delivery_fee', max_digits=6, decimal_places=2, read_only=True)
+    delivery_time = serializers.SerializerMethodField(read_only=True)
     class Meta:
         model = RestaurantOutlet
-        fields = ['id','restaurant','restaurant_name','district','district_name','city','location','is_main']
+        fields = ['id','restaurant','restaurant_name','district','district_name','city','location','is_main','delivery_fee','delivery_time']
+    
+    def get_delivery_time(self, obj):
+        if hasattr(obj, 'info') and obj.info is not None:
+            return f"{obj.info.delivery_time_min}-{obj.info.delivery_time_max} mins"
+        return None
 
 class DistrictSerializer(serializers.ModelSerializer):
     total_restaurants = serializers.IntegerField(read_only=True)
@@ -43,3 +50,4 @@ class ContactInfoSerializer(serializers.ModelSerializer):
     class Meta:
         model = ContactInfo
         fields = ['id','restaurant_outlet','phone_number','email','whatsapp_number','facebook_page','website','map_location_url']
+

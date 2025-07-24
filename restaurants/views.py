@@ -5,7 +5,7 @@ from .models import *
 from django.db.models import Count
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import OrderingFilter, SearchFilter
-from .filters import RestaurantFilter
+from .filters import RestaurantOutletFilter
 from rest_framework.decorators import action
 from rest_framework.response import Response
 
@@ -22,6 +22,10 @@ class RestaurantViewSet(ModelViewSet):
 class RestaurantOutletViewSet(ModelViewSet):
     queryset = RestaurantOutlet.objects.all()
     # serializer_class = RestaurantOutletSerializer
+    filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
+    filterset_class = RestaurantOutletFilter
+    search_fields = ['restaurant__name','restaurant__description','location','city','district__name']
+    ordering_fields = ['info__delivery_fee']
 
     def perform_create(self, serializer):
         validated_data = serializer.validated_data
