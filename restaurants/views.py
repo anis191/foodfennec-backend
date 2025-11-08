@@ -8,6 +8,8 @@ from rest_framework.filters import OrderingFilter, SearchFilter
 from .filters import RestaurantOutletFilter
 from rest_framework.decorators import action
 from rest_framework.response import Response
+from core.paginations import OutletsPagination
+from core.permissions import IsAdminOrRestaurantOwnerOrReadOnly
 
 class DistrictViewSet(ModelViewSet):
     queryset = District.objects.annotate(total_restaurants=Count('available_outlets')).all()
@@ -26,6 +28,8 @@ class RestaurantOutletViewSet(ModelViewSet):
     filterset_class = RestaurantOutletFilter
     search_fields = ['restaurant__name','restaurant__description','location','city','district__name']
     ordering_fields = ['info__delivery_fee']
+    pagination_class = OutletsPagination
+    permission_classes = [IsAdminOrRestaurantOwnerOrReadOnly]
 
     def perform_create(self, serializer):
         validated_data = serializer.validated_data
